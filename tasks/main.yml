@@ -1,0 +1,24 @@
+---
+- name: Create source list
+  copy: src=newrelic.list dest=/etc/apt/sources.list.d/newrelic.list
+  sudo: yes
+
+- name: Add newrelic key to the apt repository
+  apt_key: url=http://download.newrelic.com/548C16BF.gpg state=present
+  sudo: yes
+
+- name: Update package list
+  apt: update_cache=yes
+  sudo: yes
+
+- name: Ensure newrelic-sysmond is installed
+  apt: pkg=newrelic-sysmond state=present
+  sudo: yes
+
+- name: update newrelic nrsysmond.cfg with license key
+  template: src=nrsysmond.cfg.j2 dest=/etc/newrelic/nrsysmond.cfg mode=0640 owner=root group=newrelic
+  sudo: yes
+
+- name: start newrelic-sysmond
+  service: name=newrelic-sysmond state=started
+  sudo: yes

@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Pablo Castillo
+  company: Crush & Lovely
+  description: Installs and configures newrelic service to communicate server/application status to web service
+  license: MIT
+  min_ansible_version: 1.6
+  platforms:
+    - name: Ubuntu
+      versions:
+        - precise
+  categories:
+    - system
+    - cloud
+dependencies: []
