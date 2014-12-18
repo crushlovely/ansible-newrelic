@@ -1,21 +1,20 @@
-# Ansible Role For A Base Linux System
+# Ansible Role For the Newrelic
 
-[![Build Status](http://img.shields.io/travis/crushlovely/ansible-logrotate.svg?style=flat)](https://travis-ci.org/crushlovely/ansible-logrotate)
-[![Current Version](http://img.shields.io/github/release/crushlovely/ansible-logrotate.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1180)
+[![Build Status](http://img.shields.io/travis/crushlovely/ansible-newrelic.svg?style=flat)](https://travis-ci.org/crushlovely/ansible-newrelic)
+[![Current Version](http://img.shields.io/github/release/crushlovely/ansible-newrelic.svg?style=flat)](https://galaxy.ansible.com/list#/roles/1180)
 
-This Ansible role installs/updates and configures logrotate
+This Ansible role installs and configures Newrelic
 
 ## Installation
 
 ``` bash
-$ ansible-galaxy install crushlovely.logrotate
+$ ansible-galaxy install crushlovely.newrelic
 ```
 
 ## Variables
 
 ``` yaml
-app_path: application path
-app_name: application name
+newrelic_key: ""
 ```
 
 ## Usage
@@ -25,7 +24,7 @@ Once this role is installed on your system, include it in the roles list of your
 ``` yaml
 - hosts: localhost
   roles:
-    - { role: crushlovely.logrotate }
+    - { role: crushlovely.newrelic }
 ```
 
 ## Dependencies
