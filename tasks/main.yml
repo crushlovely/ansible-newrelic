@@ -1,4 +1,7 @@
 ---
+- name: Gather Facts about server
+  debug: var={{ ansible_hostname }}
+
 - name: Create source list
   copy: src=newrelic.list dest=/etc/apt/sources.list.d/newrelic.list
   sudo: yes
