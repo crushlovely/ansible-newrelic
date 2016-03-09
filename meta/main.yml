@@ -9,9 +9,10 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - precise
-        - Trusty
-  categories:
+        - trusty
+  galaxy_tags:
     - system
     - cloud
+    - monitoring
 dependencies: []
 version: 3.0.0
